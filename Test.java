@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 public class Test extends JFrame {
     Container c;
     JTextField nameField;
+    JTextField emailField;
     JPasswordField passwordField;
     JTextField phonTextField;
 
@@ -18,7 +19,7 @@ public class Test extends JFrame {
         c.setBackground(Color.black);
         setResizable(false);
         c.setLayout(null);
-        Font font = new Font("Arial", Font.BOLD, 12);
+        Font font = new Font("Arial", Font.BOLD, 13);
 
         // name field label & infput field
         JLabel nameLabel = new JLabel("User Name: ");
@@ -29,7 +30,7 @@ public class Test extends JFrame {
         c.add(nameLabel);
 
         nameField = new JTextField();
-        nameField.setBounds(20, 60, 260, 30);
+        nameField.setBounds(20, 55, 260, 30);
         nameField.setForeground(Color.blue);
         nameField.setEditable(true);
         c.add(nameField);
@@ -41,11 +42,11 @@ public class Test extends JFrame {
         emaiLabel.setFont(font);
         c.add(emaiLabel);
 
-        nameField = new JTextField();
-        nameField.setBounds(20, 120, 260, 30);
-        nameField.setForeground(Color.blue);
-        nameField.setEditable(true);
-        c.add(nameField);
+        emailField = new JTextField();
+        emailField.setBounds(20, 115, 260, 30);
+        emailField.setForeground(Color.blue);
+        emailField.setEditable(true);
+        c.add(emailField);
 
         // password field label & infput field
         JLabel passwordLabel = new JLabel("Password: ");
@@ -55,18 +56,18 @@ public class Test extends JFrame {
         c.add(passwordLabel);
 
         passwordField = new JPasswordField();
-        passwordField.setBounds(20, 180, 260, 30);
+        passwordField.setBounds(20, 175, 260, 30);
         c.add(passwordField);
 
         // repassword field label & infput field
-        JLabel phonLabel = new JLabel("Phone Number: ");
+        JLabel phonLabel = new JLabel("Phone Number");
         phonLabel.setForeground(Color.white);
         phonLabel.setBounds(20, 210, 100, 30);
         phonLabel.setFont(font);
         c.add(phonLabel);
 
         phonTextField = new JTextField();
-        phonTextField.setBounds(20, 240, 260, 30);
+        phonTextField.setBounds(20, 235, 260, 30);
         phonTextField.setForeground(Color.blue);
         phonTextField.setEditable(true);
         c.add(phonTextField);
@@ -91,6 +92,7 @@ public class Test extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 nameField.setText("");
+                emailField.setText("");
                 passwordField.setText("");
                 phonTextField.setText("");
             }
